@@ -1,0 +1,27 @@
+body{
+    background-color: grey;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: large;
+    text-align: center;
+}
+h1{
+    color: rgb(6, 70, 14);
+    
+}
+p{
+    text-align: center;
+    color: honeydew;
+}
+
+#message-a{
+    font-style: italic;
+}
+button{
+    color: rgb(139, 139, 139);
+    width: 150px;
+    background: goldenrod;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border: none;
+    border-radius: 2px;
+}
