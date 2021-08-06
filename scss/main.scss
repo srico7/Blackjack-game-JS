@@ -1,5 +1,7 @@
+@import './styles';
+
 body{
-    background-color: grey;
+    background-color:$mg;
     font-family: 'Times New Roman', Times, serif;
     font-size: large;
     text-align: center;
@@ -17,11 +19,10 @@ p{
     font-style: italic;
 }
 button{
-    color: rgb(139, 139, 139);
-    width: 150px;
-    background: goldenrod;
-    padding-top: 5px;
-    padding-bottom: 5px;
-    border: none;
-    border-radius: 2px;
+    @include buttons;
+    margin-bottom: .4rem;
+}
+button:hover{
+    transform: scale(1.1);
+    cursor: pointer;
 }

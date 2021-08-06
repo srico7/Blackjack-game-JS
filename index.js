@@ -1,11 +1,19 @@
-let firstCard = 13;
-let secondCard = 8;
+let firstCard = 11;
+let secondCard = 6;
+let Cards = [firstCard, secondCard]
 let sum = firstCard + secondCard;
 let hasBlackJack = false;
 let isAlive = true;
 let message = "";
+let messageA = document.getElementById("message-a");
+let sumE = document.getElementById("sum-e");
+let cardsE = document.getElementById("cards-e");
 
 function startGame(){
+    gameOut()
+}
+
+function gameOut(){
     if (sum <= 20){
         message = "DO you want to draw a new card?";
     } else if (sum === 21){
@@ -15,6 +23,15 @@ function startGame(){
         message = "You're out of the game";
         isAlive = false;
     }
-    console.log(message);
+    messageA.textContent = message;
+    sumE.textContent = "Sum: " + sum;
+    cardsE.textContent = "Cards: " + Cards[0] + ", " + Cards[1];
 }
 
+function newCard(){
+    console.log("new card");
+
+    let card = 7;
+    sum += card;
+    gameOut();
+}
