@@ -1,6 +1,6 @@
-let firstCard = 11;
-let secondCard = 6;
-let Cards = [firstCard, secondCard]
+let firstCard = getRandomCard();
+let secondCard = getRandomCard();
+let cards = [firstCard, secondCard];
 let sum = firstCard + secondCard;
 let hasBlackJack = false;
 let isAlive = true;
@@ -11,6 +11,11 @@ let cardsE = document.getElementById("cards-e");
 
 function startGame(){
     gameOut()
+}
+
+function getRandomCard(){
+    let rCard = Math.floor(Math.random() * 13) + 1;
+    return rCard;
 }
 
 function gameOut(){
@@ -25,13 +30,21 @@ function gameOut(){
     }
     messageA.textContent = message;
     sumE.textContent = "Sum: " + sum;
-    cardsE.textContent = "Cards: " + Cards[0] + ", " + Cards[1];
+    cardsE.textContent = "Cards: " ;
+
+    for (let i = 0; i < cards.length; i++){
+        cardsE.textContent += cards[i] + " "; 
+
+    }
+     
 }
 
 function newCard(){
-    console.log("new card");
 
-    let card = 7;
+    let card = getRandomCard();
     sum += card;
+
+    cards.push(card);
     gameOut();
+
 }
