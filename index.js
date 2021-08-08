@@ -15,7 +15,15 @@ function startGame(){
 
 function getRandomCard(){
     let rCard = Math.floor(Math.random() * 13) + 1;
-    return rCard;
+    if (rCard > 10){
+        return 10;
+    }
+    else if (rCard === 1){
+        return 11;
+    }
+    else {
+        return rCard
+    }
 }
 
 function gameOut(){
