@@ -8,6 +8,14 @@ let messageA = document.getElementById("message-a");
 let sumE = document.getElementById("sum-e");
 let cardsE = document.getElementById("cards-e");
 
+let bPlayer = {
+    name: "Srico",
+    chips: 140
+}
+
+let playerB = document.getElementById("b-player");
+playerB.textContent = bPlayer.name + ": $" + bPlayer.chips;
+
 function startGame(){
     isAlive = true;
     let firstCard = getRandomCard();
